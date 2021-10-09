@@ -1,0 +1,33 @@
+.trabajo {
+  padding-top: 25px ;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.trabajo main {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: center;
+}
+.trabajo main form{
+  display: flex;
+  flex-wrap: nowrap;  
+  flex-direction: column;
+  align-items: center;
+}
+.trabajo main form div{
+  padding: 5px 0px;
+}
+.trabajo main form div label{
+  padding: 0px 5px;
+}
+.trabajo small{
+  color: brown;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+a {
+  color: #00B7FF;
+} 

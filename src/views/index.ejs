@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body style="background-color:<%= locals.bgColor ? bgColor : null %> ;" class="trabajo">
+    <% if (locals.name) { %> 
+      <div>
+        <h1>Hola ​<%= name %> , elegiste el color: ​<%= color %> ​, tu email es:
+          <%= email %>  ​y tu edad es: ​<%= edad %> </h1>
+      </div>
+      <% } else { %> 
+  <main>    
+    <form action="/" method="POST">
+      <h1>Bienvenido</h1>
+      <div>
+        <label for="name" class="form-label">Ingrese su nombre</label>
+        <input type="text" id="name" name="name" placeholder="Nombre">
+        <small> <%= locals.errors && errors.name ? errors.name.msg : null %>  </small>
+      </div><br>
+
+      <div>        
+        <select name="color" id="color">          
+          <option hidden selected value="">Selecciona un color</option>
+          <option value="red">rojo</option>
+          <option value="green">verde</option>
+          <option value="blue">azul</option>
+          <option value="yellow">amarillo</option>
+          <option value="Brown">marron</option>
+          <option value="pink">rosa</option>
+          <option value="Violet">violeta</option>                 
+        </select>
+        <small> <%= locals.errors && errors.color? errors.color.msg : null %>  </small>
+      </div> <br>      
+
+      <div>          
+          <label for="email">Email </label>
+          <input type="email" name="email" id="email" placeholder="Email">
+          <small> <%= locals.errors && errors.email ? errors.email.msg : null %> </small>       
+      </div> <br>            
+
+      <div >
+        <label for="edad">Ingrese su edad</label>
+        <input type="text" name="edad" id="edad"> 
+        <small> <%= locals.errors && errors.edad ? errors.edad.msg : null %> </small>
+      </div> <br>
+
+      <div>          
+        <label for="recordar">recordar color</label>
+        <input type="checkbox" name="recordar" id="recordar">               
+    </div> <br>
+
+      <div>
+      <input type="submit" value="Registrarse" class="btn">
+      </div>
+      
+      <div>
+        <a href="/destroy">olvidar Color</a>
+      </div>
+      </form> 
+    </main>    
+    <% } %> 
+  
+  </body>
+</html>
